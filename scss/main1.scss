@@ -1,0 +1,12 @@
+$mainColor: #46b1de;
+$triangle-height: 0.5;
+@mixin triangle($width, $color) {
+    width: 0;
+    height: 0;
+    border-left: $width / 2 solid transparent;
+    border-right: $width / 2 solid transparent;
+    border-top: $width * $triangle-height solid $color;
+}
+.triangle {
+    @include triangle (50px, $mainColor);
+}
